@@ -1,0 +1,867 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 720,
+	"windowMaxHeight": 32000,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onUnload",
+		"onTimer",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 880,
+					"height": 800,
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"CheckBoxTrace": {
+					"type": "checkbox",
+					"top": 800,
+					"left": 30,
+					"width": 70,
+					"height": 20,
+					"sizingY": "fixed",
+					"text": "Trace",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnTrace",
+					"sizingX": "fixed"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information1": {
+					"type": "input",
+					"top": 70,
+					"left": 70,
+					"width": 800,
+					"height": 350,
+					"dataSource": "_Descriptions{1}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"HDIpicture": {
+					"type": "picture",
+					"top": 209,
+					"left": 37,
+					"width": 424,
+					"height": 82,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/ListBox.png"
+				},
+				"HDIpicture1": {
+					"type": "picture",
+					"top": 656,
+					"left": 410,
+					"width": 480,
+					"height": 140,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/firstNameColumn.png"
+				},
+				"HDIpicture2": {
+					"type": "picture",
+					"top": 483,
+					"left": 411,
+					"width": 480,
+					"height": 141,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/lastNameColumn.png"
+				},
+				"HDIpicture3": {
+					"type": "picture",
+					"top": 311,
+					"left": 411,
+					"width": 470,
+					"height": 144,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/salaryColumn.png"
+				},
+				"Line": {
+					"type": "line",
+					"top": 290,
+					"left": 370,
+					"width": 0,
+					"height": 110,
+					"startPoint": "topLeft",
+					"strokeDashArray": [
+						3,
+						5
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 400,
+					"left": 370,
+					"width": 20,
+					"height": 0,
+					"startPoint": "topLeft",
+					"strokeDashArray": [
+						3,
+						5
+					]
+				},
+				"Line2": {
+					"type": "line",
+					"top": 290,
+					"left": 260,
+					"width": 0,
+					"height": 270,
+					"startPoint": "topLeft",
+					"strokeDashArray": [
+						3,
+						5
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 560,
+					"left": 260,
+					"width": 130,
+					"height": 0,
+					"startPoint": "topLeft",
+					"strokeDashArray": [
+						3,
+						5
+					]
+				},
+				"Line4": {
+					"type": "line",
+					"top": 290,
+					"left": 100,
+					"width": 0,
+					"height": 450,
+					"startPoint": "topLeft",
+					"strokeDashArray": [
+						3,
+						5
+					]
+				},
+				"Line5": {
+					"type": "line",
+					"top": 740,
+					"left": 100,
+					"width": 290,
+					"height": 0,
+					"startPoint": "topLeft",
+					"strokeDashArray": [
+						3,
+						5
+					]
+				},
+				"information2": {
+					"type": "input",
+					"top": 70,
+					"left": 70,
+					"width": 800,
+					"height": 130,
+					"dataSource": "_Descriptions{2}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			},
+			"entryOrder": [
+				"information2"
+			]
+		},
+		{
+			"objects": {
+				"EmployeesLB1": {
+					"type": "listbox",
+					"top": 370,
+					"left": 70,
+					"width": 385,
+					"height": 141,
+					"sizingY": "fixed",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": true,
+					"hideFocusRing": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"dataSource": "Form:C1466.employees",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "visible",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDataChange",
+						"onDragOver",
+						"onAfterKeystroke",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick",
+						"onDeleteAction",
+						"onScroll"
+					],
+					"metaSource": "setItalic ",
+					"hideSystemHighlight": false,
+					"sortable": false,
+					"method": "ObjectMethods/EmployeesLB1.4dm",
+					"dragging": "custom",
+					"dropping": "custom",
+					"columns": [
+						{
+							"name": "firstname",
+							"dataSource": "This:C1470.firstname",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "headerFirstname",
+								"text": "Firstname"
+							},
+							"footer": {
+								"name": " 1",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": true,
+							"textAlign": "center"
+						},
+						{
+							"name": "lastname",
+							"dataSource": "This:C1470.lastname",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"header": {
+								"name": "headerLastname",
+								"text": "Lastname"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": true,
+							"events": [],
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "headerSalary",
+								"text": "Salary"
+							},
+							"name": "salary",
+							"dataSource": "This:C1470.salary",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSourceTypeHint": "number",
+							"enterable": true,
+							"events": [],
+							"textAlign": "center",
+							"width": 100
+						}
+					]
+				},
+				"FormEventValue": {
+					"type": "input",
+					"left": 490,
+					"top": 370,
+					"width": 320,
+					"height": 140,
+					"dataSource": "Form:C1466.event",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"visibility": "visible",
+					"sizingY": "fixed"
+				},
+				"FormEventText": {
+					"type": "text",
+					"text": "Form event",
+					"top": 350,
+					"left": 490,
+					"width": 200,
+					"height": 20,
+					"visibility": "visible",
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed"
+				},
+				"EmployeesText": {
+					"type": "text",
+					"text": "Employees",
+					"top": 350,
+					"left": 70,
+					"width": 350,
+					"height": 20,
+					"visibility": "visible",
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed"
+				},
+				"information3": {
+					"type": "input",
+					"top": 70,
+					"left": 70,
+					"width": 800,
+					"height": 270,
+					"dataSource": "_Descriptions{3}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"HeaderClickCode": {
+					"type": "input",
+					"top": 570,
+					"left": 70,
+					"width": 740,
+					"height": 230,
+					"dataSource": "_TabLineCode{2}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"HeaderClickText": {
+					"type": "text",
+					"text": "Code executed when the On Header Click event is triggered:",
+					"top": 550,
+					"left": 70,
+					"width": 410,
+					"height": 20,
+					"visibility": "visible",
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed",
+					"textDecoration": "underline"
+				},
+				"DragMeText": {
+					"type": "input",
+					"left": 490,
+					"top": 530,
+					"width": 320,
+					"height": 20,
+					"dataSource": "\"Drag me on the list box\"",
+					"enterable": false,
+					"focusable": false,
+					"fill": "#b1c4dd",
+					"visibility": "visible",
+					"sizingY": "fixed"
+				}
+			},
+			"entryOrder": [
+				"EmployeesLB1",
+				"FormEventValue",
+				"information3",
+				"HeaderClickCode",
+				"DragMeText"
+			]
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "input",
+					"top": 70,
+					"left": 70,
+					"width": 800,
+					"height": 100,
+					"dataSource": "_Descriptions{4}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"EmployeesLB2": {
+					"type": "listbox",
+					"top": 210,
+					"left": 70,
+					"width": 415,
+					"height": 221,
+					"sizingY": "fixed",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"dataSource": "Form:C1466.employees",
+					"selectionMode": "multiple",
+					"scrollbarHorizontal": "hidden",
+					"events": [],
+					"metaSource": "setColor",
+					"hideSystemHighlight": true,
+					"columns": [
+						{
+							"name": "firstname1",
+							"dataSource": "This:C1470.firstname",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "headerFirstname1",
+								"text": "Firstname"
+							},
+							"footer": {
+								"name": " 2",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false
+						},
+						{
+							"name": "lastname1",
+							"dataSource": "This:C1470.lastname",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"header": {
+								"name": "headerLastname1",
+								"text": "Lastname"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false,
+							"events": []
+						},
+						{
+							"header": {
+								"name": "headerSalary1",
+								"text": "Salary"
+							},
+							"name": "salary1",
+							"dataSource": "This:C1470.salary",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSourceTypeHint": "number",
+							"enterable": false,
+							"events": [],
+							"width": 100
+						}
+					]
+				},
+				"Text2": {
+					"type": "input",
+					"top": 530,
+					"left": 70,
+					"width": 415,
+					"height": 230,
+					"dataSource": "_TabLineCode{1}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"HDIpicture4": {
+					"type": "picture",
+					"top": 280,
+					"left": 557,
+					"width": 333,
+					"height": 59,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/metaInfoExpression.png",
+					"sizingY": "fixed"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 308,
+					"left": 492,
+					"width": 60,
+					"height": 0,
+					"strokeDashArray": [
+						3,
+						5
+					],
+					"startPoint": "topLeft",
+					"sizingY": "fixed"
+				},
+				"SelectColorText3": {
+					"type": "text",
+					"text": "setColor method",
+					"top": 510,
+					"left": 70,
+					"width": 250,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"visibility": "visible",
+					"sizingY": "fixed"
+				},
+				"EmployeesText1": {
+					"type": "text",
+					"text": "Employees",
+					"top": 190,
+					"left": 70,
+					"width": 350,
+					"height": 20,
+					"visibility": "visible",
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed"
+				}
+			}
+		},
+		{
+			"objects": {
+				"ListBoxGame": {
+					"type": "listbox",
+					"left": 70,
+					"top": 340,
+					"width": 200,
+					"height": 40,
+					"events": [
+						"onClick"
+					],
+					"headerHeight": "21px",
+					"showHeaders": false,
+					"focusable": false,
+					"listboxType": "collection",
+					"selectionMode": "none",
+					"dataSource": "Form:C1466.try",
+					"method": "ObjectMethods/ListBoxGame.4dm",
+					"rowHeight": "20px",
+					"scrollbarVertical": "hidden",
+					"scrollbarHorizontal": "hidden",
+					"fontWeight": "bold",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header3"
+							},
+							"name": "Column1",
+							"width": 50,
+							"footer": {
+								"name": "Footer9"
+							},
+							"dataSource": "This:C1470.col1",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Header4"
+							},
+							"name": "Column2",
+							"width": 50,
+							"footer": {
+								"name": "Footer10"
+							},
+							"dataSource": "This:C1470.col2",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Header5"
+							},
+							"name": "Column3",
+							"width": 50,
+							"footer": {
+								"name": "Footer11"
+							},
+							"dataSource": "This:C1470.col3",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Header6"
+							},
+							"name": "Column4",
+							"width": 50,
+							"footer": {
+								"name": "Footer12"
+							},
+							"dataSource": "This:C1470.col4",
+							"textAlign": "center"
+						}
+					]
+				},
+				"SolutionLB": {
+					"type": "listbox",
+					"left": 570,
+					"top": 340,
+					"width": 200,
+					"height": 40,
+					"events": [],
+					"headerHeight": "21px",
+					"showHeaders": false,
+					"focusable": false,
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.solution",
+					"selectionMode": "none",
+					"sortable": false,
+					"stroke": "automatic",
+					"fill": "#c0c0c0",
+					"alternateFill": "#c0c0c0",
+					"rowHeight": "20px",
+					"scrollbarHorizontal": "hidden",
+					"scrollbarVertical": "hidden",
+					"visibility": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header7"
+							},
+							"name": "Column9",
+							"width": 50,
+							"footer": {
+								"name": "Footer13"
+							},
+							"dataSource": "This:C1470.col1",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header8",
+								"text": "Header4"
+							},
+							"name": "Column10",
+							"width": 50,
+							"footer": {
+								"name": "Footer14"
+							},
+							"dataSource": "This:C1470.col2",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header9",
+								"text": "Header5"
+							},
+							"name": "Column11",
+							"width": 50,
+							"footer": {
+								"name": "Footer15"
+							},
+							"dataSource": "This:C1470.col3",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header10",
+								"text": "Header6"
+							},
+							"name": "Column12",
+							"width": 50,
+							"footer": {
+								"name": "Footer16"
+							},
+							"dataSource": "This:C1470.col4",
+							"textAlign": "center"
+						}
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "Replay",
+					"top": 409,
+					"left": 70,
+					"width": 100,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm",
+					"focusable": false
+				},
+				"Text": {
+					"type": "text",
+					"text": "Attempts:",
+					"top": 290,
+					"left": 85,
+					"width": 120,
+					"height": 20,
+					"textAlign": "right"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 220,
+					"top": 290,
+					"width": 50,
+					"height": 20,
+					"dataSource": "Form:C1466.attempts",
+					"fill": "transparent",
+					"enterable": false,
+					"focusable": false
+				},
+				"GameOverLost": {
+					"type": "text",
+					"text": "Sorry, you didn't win.",
+					"top": 460,
+					"left": 70,
+					"width": 250,
+					"height": 20,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"visibility": "hidden",
+					"stroke": "#dc143c"
+				},
+				"FormEventValue1": {
+					"type": "input",
+					"left": 70,
+					"top": 520,
+					"width": 320,
+					"height": 180,
+					"dataSource": "Form:C1466.event",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"visibility": "hidden"
+				},
+				"FormEventText1": {
+					"type": "text",
+					"text": "Form event",
+					"top": 500,
+					"left": 70,
+					"width": 200,
+					"height": 20,
+					"visibility": "hidden",
+					"fontWeight": "bold",
+					"stroke": "automatic"
+				},
+				"Text4": {
+					"type": "input",
+					"top": 70,
+					"left": 70,
+					"width": 800,
+					"height": 160,
+					"dataSource": "_Descriptions{5}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"GameOverWon": {
+					"type": "text",
+					"text": "You win!!",
+					"top": 460,
+					"left": 70,
+					"width": 250,
+					"height": 20,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"visibility": "hidden",
+					"stroke": "#008000"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Play here",
+					"top": 320,
+					"left": 70,
+					"width": 200,
+					"height": 20,
+					"textAlign": "left",
+					"fontWeight": "bold"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "View solution",
+					"top": 310,
+					"left": 570,
+					"width": 130,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm",
+					"focusable": false
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"width": 920,
+	"height": 840
+}
